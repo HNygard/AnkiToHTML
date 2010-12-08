@@ -59,23 +59,26 @@ echo '<table>'.chr(10).chr(10);
 $lines = explode("\n", $content);
 foreach($lines as $line)
 {
-	$vars = explode("\t", $line);
+	if(!empty($line))
+	{
+		$vars = explode("\t", $line);
 	
 	
-	echo '<tr><td class="question">';
-	if(isset($vars[0]))
-		echo $vars[0];
-	else
-		echo '&nbsp;';
-	echo '</td></tr><tr><td class="answer">';
-	if(isset($vars[1]))
-		echo $vars[1];
-	else
-		echo '&nbsp;';
-	echo '</td></tr>';
-	if(isset($vars[2]) && !empty($vars[2]))
-		echo '<tr><td class="tags">'.$vars[2].'</td></tr>';
+		echo '<tr><td class="question">';
+		if(isset($vars[0]))
+			echo $vars[0];
+		else
+			echo '&nbsp;';
+		echo '</td></tr><tr><td class="answer">';
+		if(isset($vars[1]))
+			echo $vars[1];
+		else
+			echo '&nbsp;';
+		echo '</td></tr>';
+		if(isset($vars[2]) && !empty($vars[2]))
+			echo '<tr><td class="tags">'.$vars[2].'</td></tr>';
 	
-	echo '<tr class="line">&nbsp;</tr>'.chr(10);
+		echo '<tr class="line">&nbsp;</tr>'.chr(10);
+	}
 }
 echo '</table>';
