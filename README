@@ -1,0 +1,7 @@
+AnkiToHTML
+
+Export in Anki to "Cards in tab-seperated text file (*.txt)" and 
+check "Include tags" if you want to include those. Can also limit to
+some tags.
+
+Save the file in the directory "ankifiles" (might need to create this).
