@@ -8,7 +8,7 @@ if(!isset($_GET['file']) && $h = opendir($directory_ankifiles))
 	
 	while (false !== ($file = readdir($h)))
 	{
-		if($file != '.' && $file != '..')
+		if($file != '.' && $file != '..' && $file != 'Put your files here')
 			echo '<a href="'.$_SERVER['PHP_SELF'].'?file='.$file.'">'.
 				$file.'</a><br />';
 	}
