@@ -28,12 +28,13 @@ table { border-collapse:collapse; }
 
 .question
 {
-	font-size: 1.5em;
+	font-size: 1.7em;
 	border: 1px dashed gray;	
 }
 
 .answer
 {
+	height: 30px;
 	font-size: 1.3em;
 	left: 50px;
 	border: 1px dashed gray;
